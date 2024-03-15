@@ -1,0 +1,346 @@
+/* Reset some @keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}..............default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /*background-color: rgba(0, 0, 255, 0);*/
+}
+
+header {
+    position: -webkit-sticky; position: sticky; top: 0;
+    background: transparent;
+    background-color: darkcyan;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 20px;
+    background: transparent;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background-color: #555;
+    
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #f0f0f0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    flex-basis: 30%;
+}
+
+.feature img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+input[type="text"] {
+    padding: 0.5rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    /*background-color: #007BFF;*/
+    color: #fff;
+    border: none;
+    border-radius: 5 0px 0px 5;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.25 ease;
+  }
+ /* button :active{
+  transform: scale(0.99);
+  }*/
+footer {
+    background-color: darkcyan;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    height: 5rem;
+}
+footer p{
+align-items: center;
+}
+
+/*@keyframes Slide{
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.hero-content h2{
+    animation-name: Slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+}*/
+
+
+/*.feature {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }*/
+/*.logo{
+    color: var(--color-secondary); ;
+    animation: multicolor 5s infinite;
+    -webkit-animation: multicolor 5s infinite;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+}
+
+
+@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}
+.logo span{
+    color: var(--color-primary);
+    animation: multicolor 5s infinite;
+    -webkit-animation: multicolor 5s infinite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: grey;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: grey;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: grey;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: grey;}
+}*/
+.hero{
+    background-attachment: fixed;
+    background-image: url(assest/books-3.jpg);
+    height: 230px;
+}

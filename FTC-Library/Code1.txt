@@ -1,0 +1,116 @@
+Library
+Sure! Below is an example of a basic search page using HTML, CSS, and JavaScript:
+
+**HTML:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Library Search</h1>
+  </header>
+
+  <main>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Enter book title or author">
+      <button onclick="searchBooks()">Search</button>
+    </div>
+
+    <div id="searchResults">
+      <!-- Search results will be displayed here -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+**CSS (styles.css):**
+```css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#searchResults {
+  /* Styles for displaying search results */
+}
+```
+
+**JavaScript (script.js):**
+```javascript
+// Sample data for demonstration purposes
+const books = [
+  { title: "Book 1", author: "Author A" },
+  { title: "Book 2", author: "Author B" },
+  { title: "Book 3", author: "Author C" },
+  // Add more books as needed
+];
+
+function searchBooks() {
+  const searchInput = document.getElementById("searchInput").value.toLowerCase();
+  const searchResults = document.getElementById("searchResults");
+  searchResults.innerHTML = "";
+
+  const filteredBooks = books.filter((book) => {
+    const title = book.title.toLowerCase();
+    const author = book.author.toLowerCase();
+    return title.includes(searchInput) || author.includes(searchInput);
+  });
+
+  if (filteredBooks.length === 0) {
+    searchResults.innerHTML = "<p>No results found.</p>";
+  } else {
+    filteredBooks.forEach((book) => {
+      const bookDiv = document.createElement("div");
+      bookDiv.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p>`;
+      searchResults.appendChild(bookDiv);
+    });
+  }
+}
+```
+
+In this example, the user can enter a book title or author in the search input field, click the "Search" button, and the JavaScript function `searchBooks()` will filter the sample `books` array based on the search input and display the matching results below the search box. In a real-world scenario, you would typically fetch data from a server or database instead of using a static array like in this example.

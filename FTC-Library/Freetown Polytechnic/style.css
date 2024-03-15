@@ -1,0 +1,135 @@
+img{
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    font-size: large;
+   
+  }
+div.pic{
+  text-align: center;
+  border-radius: 50px;
+}
+:root{
+  --color-primary: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black: #141d28;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url(./next.jpg);
+}
+.menu_bar{
+  background-color: var(--color-black);
+  height:80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+.logo{
+  color: gray;
+  font-size: 30px;
+
+}
+.logo span{
+  color: var(--color-primary);
+
+}
+.menu_bar ul{
+  list-style: none;
+  display: flex;
+}
+.menu_bar ul li{
+  padding: 10px 30px;
+  position: relative;
+}
+.menu_bar ul li a{
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 20px;
+
+  transition: all 0.3s;
+}
+.menu_bar ul li a:hover{
+  color: var(--color-primary);
+}
+.dropdown_menu{
+  display: none;
+}
+
+.menu_bar ul li:hover.dropdown_menu{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-black);
+}
+.menu_bar ul li:hover.dropdown_menu ul{
+  display: block;
+  margin: 10px;
+}
+.menu_bar ul li:hover.dropdown_menu ul li{
+  width:150px;
+  padding:5px;
+  margin: 0%;
+}
+.fas{
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+.hero{
+  height: calc(100vh - 80px);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  
+}
+h2{
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 2%;
+  color: blue;
+}
+div.table{
+  text-align: center;
+}
+ div.dex{
+   position: fixed;
+   top: 2%;
+   left: 0%;
+   right: 0%;
+ }
+ @keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color:darkcyan;}
+    25%{color: red;}
+}
+@-webkit-keyframes multicolor{
+    50% {color: green;}
+    40% {color: darkcyan;}
+    25%{color: red;}
+    60% {color: green;}
+    80% {color: darkcyan;}
+    25%{color: red;}
+}
+.logo{
+    font-size: 30px;
+    animation: multicolor 5s infinite;
+    -webkit-animation: multicolor 5s infinite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.samuel{
+max-width: 50%;
+image-orientation: var(--color-black);
+}

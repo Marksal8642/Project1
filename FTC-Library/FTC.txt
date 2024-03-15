@@ -1,0 +1,134 @@
+FTC 
+Sure! Here's the full HTML code for the library management system:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+
+    <div class="container">
+        <!-- Your content will go here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+Make sure to save this code in a file with the extension `.html`, for example, `index.html`.
+
+For the CSS and JavaScript parts, you can use the CSS and JavaScript code provided in the previous response. Save the CSS code in a file called `styles.css` and the JavaScript code in a file called `script.js`.
+
+With this setup, you should be able to see a basic library management system when you open the `index.html` file in your web browser. The system will display the sample books data in a container on the page. Remember, this example does not include backend functionality or interactivity like adding or deleting books. It is a simple starting point to demonstrate the front-end structure of the system.
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.book {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.book h2 {
+    margin-top: 0;
+}
+
+/* Add more styles as needed */
+.......................................
+
+Certainly! Here's the full JavaScript code for the library management system:
+
+```javascript
+// Sample books data
+let books = [
+    { id: 1, title: 'Book 1', author: 'Author 1', genre: 'Fiction' },
+    { id: 2, title: 'Book 2', author: 'Author 2', genre: 'Non-fiction' },
+    // Add more books here...
+];
+
+function displayBooks() {
+    // Get the container div where books will be displayed
+    const container = document.querySelector('.container');
+
+    // Clear previous content
+    container.innerHTML = '';
+
+    // Loop through the books array and create elements for each book
+    books.forEach((book) => {
+        const bookElement = document.createElement('div');
+        bookElement.classList.add('book');
+        bookElement.innerHTML = `
+            <h2>${book.title}</h2>
+            <p><strong>Author:</strong> ${book.author}</p>
+            <p><strong>Genre:</strong> ${book.genre}</p>
+        `;
+        container.appendChild(bookElement);
+    });
+}
+
+// Call the displayBooks function to initially show the books
+displayBooks();
+```
+
+Save this JavaScript code in a file named `script.js`. When you link this JavaScript file to your `index.html` as shown in the previous responses, it will provide the dynamic functionality to display the sample books on the page.
+
+The JavaScript code includes a sample `books` array containing book objects with properties like `id`, `title`, `author`, and `genre`. The `displayBooks` function takes care of rendering these book objects as elements in the HTML.
+
+As before, keep in mind that this example is a simplified version and doesn't include backend functionalities like adding, updating, or deleting books. It's intended to demonstrate the frontend logic for displaying books in the library management system. You can build upon this code and add more features as per your specific requirements.
+.............................................................
+The provided HTML code is the basic structure of the library management system, but it lacks the complete implementation for a fully functional system. It includes the necessary elements for displaying the books and applying basic styles using CSS, as well as the JavaScript code to render the sample books on the page.
+
+However, a fully functional library management system requires additional components and functionalities such as:
+
+1. **Backend and Database:** The code provided only contains the frontend part of the system. For a real-world application, you need a backend to handle data storage, database interactions, and server-side operations.
+
+2. **User Interactions:** The system should allow users to perform various actions, such as adding new books, updating book details, and deleting books from the library.
+
+3. **Search and Filter:** A search functionality would be beneficial for users to find specific books. Additionally, a filter mechanism could be implemented to sort books based on genres, authors, etc.
+
+4. **User Authentication:** If this system is intended for multiple users, implementing user authentication would be essential to secure user-specific data and access rights.
+
+5. **Responsive Design:** Ensuring that the system is responsive to different screen sizes and devices is crucial for an optimal user experience.
+
+6. **Error Handling:** Implementing error handling mechanisms to manage unexpected situations and provide feedback to users in case of errors or invalid inputs.
+
+7. **Data Validation:** Validating user inputs before adding or updating book details is essential to ensure data consistency and integrity.
+
+8. **Book Details Page:** You could create a detailed page for each book that shows more information about the book, such as the cover image, synopsis, and availability status.
+
+Building a comprehensive library management system with all these features requires a more in-depth and complex development process. It may involve using a backend language like Node.js, Python, or PHP along with a database such as MySQL or MongoDB.
+
+As the code provided earlier was intended as a starting point to demonstrate the basic frontend structure, it's essential to extend and modify it significantly to create a fully functional library management system. Depending on your programming expertise and project requirements, you might consider seeking assistance from other developers or using frameworks and libraries to simplify the development process.
+
+
+z-index: -1;
+<span class="auto-style2">Hurry Up!</span>Heavy Discount On Weekend...... </h1>
+font-family: 'Times New Roman', Times, serif;
+}

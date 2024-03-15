@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freetown Polytechnic Library</title>
+    <link rel="stylesheet" href="style.css" href="Media.css" />
+    <style>
+      @keyframes multicolor {
+        90% {
+          color: rgb(52, 158, 199);
+        }
+        50% {
+          color: green;
+        }
+        55% {
+          color: #0404ac;
+        }
+        60% {
+          color: aqua;
+        }
+        80% {
+          color: Red;
+        }
+        60% {
+          color: yellowgreen;
+        }
+        90% {
+          color: #d3d3d380;
+        }
+        80% {
+          color: burlywood;
+        }
+      }
+      @-webkit-keyframes multicolor {
+        90% {
+          color: rgb(52, 58, 99);
+        }
+        40% {
+          color: rgba(255, 215, 0, 0.3);
+        }
+        60% {
+          color: aqua;
+        }
+        90% {
+          color: cadetblue;
+        }
+        50% {
+          color: #ffff0080;
+        }
+      }
+      .hero-content h2 {
+        color: var(--color-primary);
+        animation: multicolor 5s infinite;
+        -webkit-animation: multicolor 5s infinite;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-weight: 1000;
+      }
+      .logo {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .logo-badge {
+        display: flex;
+      }
+
+      .logo-badge img {
+        max-width: 50px; /* Adjust size as needed */
+        height: auto;
+        margin-right: 10px;
+        /*max-width: 50px;*/
+        /*height: 70px;*/
+        /*font-size: 100px;*/
+        border-radius: 10px 20px 30px 40px;
+      }
+      h1 {
+        letter-spacing: 5px;
+        font-size: 35px;
+      }
+    </style>
+    <script language="JavaScript">
+      function start() {
+        alert(pText.innerText);
+        pText.innerText = "Thanks for coming.";
+      }
+    </script>
+  </head>
+  <body ONLOAD="start()" bgcolor="rgba(0, 0, 0, 1.0);" background="transparent">
+    <header>
+      <section class="logo-badge">
+        <img src="assest/FP2.jpg" alt="" />
+      </section>
+      <h1
+        class="logo"
+        style="
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          color: #00002e;
+          font-weight: 1000;
+        "
+      >
+        Welcome to Freetown <span>Polytechnic</span> Library
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book.html">Books</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="Past-Question.html">Past-Question</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <p id="pText">Hi Dear, click ok</p>
+
+      <section class="hero">
+        <div class="hero-content">
+          <h2 style="font-weight: 700; font-style: oblique">
+            Explore the World of Books
+          </h2>
+          <p
+            style="
+              color: white;
+              font-size: 20px;
+              font-style: italic;
+              font-weight: 800;
+            "
+          >
+            <b>Find your favorite books and discover new ones.</b>
+          </p>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <!--img src="" alt="Feature 2"-->
+          <h3
+            style="
+              color: azure;
+              font-family: Georgia, 'Times New Roman', Times, serif;
+              letter-spacing: 3px;
+            "
+          >
+            Online Catalog
+          </h3>
+
+          <p
+            style="
+              color: azure;
+              font-style: italic;
+              font-size: 20px;
+              font-weight: 800;
+            "
+          >
+            Access vast online catalog of books.
+          </p>
+          <!--input type="text" id="searchInput" placeholder="Enter book title or author"-->
+
+          <a href="https://www.pdfdrive.com/">
+            <button
+              style="
+                background-color: rgba(52, 158, 199, 1);
+                color: #00002e;
+                font-weight: 900;
+                font-style: oblique;
+                border-radius: 5px;
+              "
+            >
+              Click Here
+            </button>
+          </a>
+        </div>
+        <div class="feature">
+          <!--img src="" alt="Feature 2"-->
+          <h3
+            style="
+              color: white;
+              font-family: Georgia, 'Times New Roman', Times, serif;
+              letter-spacing: 3px;
+            "
+          >
+            Add books suggestion
+          </h3>
+          <p
+            style="
+              color: white;
+              font-style: italic;
+              font-size: 20px;
+              font-weight: 800;
+            "
+          >
+            For books suggestion, to be added.
+          </p>
+
+          <!--input type="text" id="searchInput" placeholder="Enter book title or author"-->
+
+          <a href="http://127.0.0.1:5503/book.html">
+            <button
+              style="
+                background-color: rgba(52, 158, 199, 1);
+                color: #00002e;
+                font-weight: 900;
+                font-style: oblique;
+                border-radius: 5px;
+              "
+            >
+              Click Here
+            </button>
+          </a>
+        </div>
+
+        <!-- Add more features as needed -->
+      </section>
+    </main>
+
+    <footer>
+      <p style="color: #00002e; font-size: 20px">
+        &copy; 2023 @Marksal. All rights reserved.
+      </p>
+    </footer>
+
+    <!--script src="script.js"></script-->
+  </body>
+</html>

@@ -1,0 +1,25 @@
+/*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-size: cover;
+    background-position: center;
+    
+    font-family: sans-serif;
+} 
+.ftc{
+    background: rgb(0, 100, 0);
+    text-align: center;
+}
+.ftc ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+} 
+.ftc ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+}
+
+/* Book details section */
+.book {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.book h2 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.book p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#borrow-btn {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#borrow-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Library System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book.html">Books</a></li>
+            <li><a href="#">Borrowed Books</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="book-details">
+        <div class="book">
+            <h2>Title of the Book</h2>
+            <p><strong>Author:</strong> Author Name</p>
+            <p><strong>ISBN:</strong> 1234567890</p>
+            <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et est
+                efficitur, consectetur quam ac, aliquam velit. Nunc sed fermentum lorem.</p>
+            <p><strong>Availability:</strong> Available</p>
+            <!-- You can use a button to allow users to borrow the book -->
+            <button id="borrow-btn">Borrow this book</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Library System. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

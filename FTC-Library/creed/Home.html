@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration and Login</title>
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container" id="loginFormContainer">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" name="loginUsername" required>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginMessage"></p>
+    </div>
+    <div class="form-container" id="registrationFormContainer">
+      <h2>Registration</h2>
+      <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <button type="submit">Register</button>
+      </form>
+      <p id="registrationMessage"></p>
+    </div>
+  </div>
+  <script src="Script.js"></script>
+</body>
+</html>

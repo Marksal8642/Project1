@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Books Library</title>
+    <link rel="stylesheet" href="Media.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: -webkit-sticky; position: sticky; top: 0;
+}
+
+nav {
+    background-color: #444;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#87CEEB80;
+  }
+  
+  .book-list {
+    margin-top: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .add-book {
+    margin-top: 30px;
+  }
+  
+  form input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    padding: 10px 15px;
+    background-color: mediumaquamarine;
+  }
+  main {
+    padding: 2rem;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="text"] {
+    padding: 0.5rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  /*#searchResults {
+     Styles for displaying search results 
+  }*/
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const bookList = document.getElementById('book-list');
+    const addBookForm = document.getElementById('add-book-form');
+  
+    // Sample book data for initial display
+    const books = [
+      { title: 'Book 1', author: 'Author 1', isbn: 'ISBN 1234' },
+      { title: 'Book 2', author: 'Author 2', isbn: 'ISBN 5678' },
+    ];
+  
+    function displayBooks() {
+      bookList.innerHTML = '';
+      books.forEach((book, index) => {
+        const bookRow = document.createElement('tr');
+        bookRow.innerHTML = `
+          <td>${book.title}</td>
+          <td>${book.author}</td>
+          <td>${book.isbn}</td>
+          <td>
+            <button onclick="editBook(${index})">Edit</button>
+            <button onclick="deleteBook(${index})">Delete</button>
+          </td>
+        `;
+        bookList.appendChild(bookRow);
+      });
+    }
+  
+    function addBook(title, author, isbn) {
+      const book = { title, author, isbn }; 
+      books.push(book);
+      displayBooks();
+    }
+  
+    function editBook(index) {
+      const book = books[index];
+      const titleInput = addBookForm.querySelector('input[placeholder="Title"]');
+      const authorInput = addBookForm.querySelector('input[placeholder="Author"]');
+      const isbnInput = addBookForm.querySelector('input[placeholder="ISBN"]');
+  
+      titleInput.value = book.title;
+      authorInput.value = book.author;
+      isbnInput.value = book.isbn;
+  
+      addBookForm.onsubmit = function(event) {
+        event.preventDefault();
+        const newTitle = titleInput.value;
+        const newAuthor = authorInput.value;
+        const newIsbn = isbnInput.value;
+  
+        books[index] = { title: newTitle, author: newAuthor, isbn: newIsbn };
+        addBookForm.reset();
+        displayBooks();
+        addBookForm.onsubmit = addNewBook;
+      };
+    }
+  
+    function deleteBook(index) {
+      books.splice(index, 1);
+      displayBooks();
+    }
+  
+    function addNewBook(event) {
+      event.preventDefault();
+      const titleInput = addBookForm.querySelector('input[placeholder="Title"]');
+      const authorInput = addBookForm.querySelector('input[placeholder="Author"]');
+      const isbnInput = addBookForm.querySelector('input[placeholder="ISBN"]');
+  
+      const title = titleInput.value;
+      const author = authorInput.value;
+      const isbn = isbnInput.value;
+  
+      addBook(title, author, isbn);
+      addBookForm.reset();
+    }
+  
+    addBookForm.onsubmit = addNewBook;
+    displayBooks();
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const bookList = document.getElementById('book-list');
+    const addBookForm = document.getElementById('add-book-form');
+  
+    // Simulated back-end data storage
+    let books = [
+      { Title: 'Calculus', Author: 'labrat', Isbn: 'ISBN 1234' },
+      { Title: 'E-commerce', Author: 'Kratos', Isbn: 'ISBN 5678' },
+      { Title: 'Computer Archetechture and Organization', Author: 'Lamin', Isbn: 'ISBN 4321' },
+      { Title: 'WordPress', Author: 'Seth', Isbn: 'ISBN 8642' },
+    ];
+  
+    function displayBooks() {
+      bookList.innerHTML = '';
+      books.forEach((book, index) => {
+        const bookRow = document.createElement('tr');
+        bookRow.innerHTML = `
+          <td>${book.Title}</td>
+          <td>${book.Author}</td>
+          <td>${book.Isbn}</td>
+          <td>
+            <button onclick="editBook(${index})">Edit</button>
+            <button onclick="deleteBook(${index})">Delete</button>
+          </td>
+        `;
+        bookList.appendChild(bookRow);
+      });
+    }  
+  
+    function addBook(title, author, isbn) {
+      const book = { title, author, isbn };
+      books.push(book);
+      displayBooks();
+    }
+  
+    function editBook(index) {
+      const book = books[index];
+      const titleInput = addBookForm.querySelector('input[placeholder="Title"]');
+      const authorInput = addBookForm.querySelector('input[placeholder="Author"]');
+      const isbnInput = addBookForm.querySelector('input[placeholder="ISBN"]');
+  
+      titleInput.value = book.title;
+      authorInput.value = book.author;
+      isbnInput.value = book.isbn;
+  
+      addBookForm.onsubmit = function(event) {
+        event.preventDefault();
+        const newTitle = titleInput.value;
+        const newAuthor = authorInput.value;
+        const newIsbn = isbnInput.value;
+  
+        books[index] = { title: newTitle, author: newAuthor, isbn: newIsbn };
+        addBookForm.reset();
+        displayBooks();
+        addBookForm.onsubmit = addNewBook;
+      };
+    }
+  
+    function deleteBook(index) {
+      books.splice(index, 1);
+      displayBooks();
+    }
+  
+    function addNewBook(event) {
+      event.preventDefault();
+      const titleInput = addBookForm.querySelector('input[placeholder="Title"]');
+      const authorInput = addBookForm.querySelector('input[placeholder="Author"]');
+      const isbnInput = addBookForm.querySelector('input[placeholder="ISBN"]');
+  
+      const title = titleInput.value;
+      const author = authorInput.value;
+      const isbn = isbnInput.value;
+  
+      addBook(title, author, isbn);
+      addBookForm.reset();
+    }
+  
+    addBookForm.onsubmit = addNewBook;
+    displayBooks();
+  });
+  
+    </script>
+</head>
+
+<body bgcolor="white">
+
+  <header class="sticky">
+    <h1>Library Search</h1>
+  </header>
+
+  <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Books</a></li>
+        <!--li><a href="#">Borrowed Books</a></li-->
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Past-Question.html">Past-Question</a></li>
+    </ul>
+</nav>
+
+  <main>
+    <div class="search-container">
+      <!--input type="text" id="searchInput" placeholder="Click Search for Books Online"-->
+      <p style="border: 6px solid #ccc; border-radius: 5px;">Click the Search Button, to search for More Books</p>
+      <a href="https://books.google.com/">
+      <button >Search</button>  
+    </a>
+    
+  </div>
+
+    <div id="searchResults">
+      <!-- Search results will be displayed here -->
+    </div>
+  </main>
+
+  <script src="book.js"></script>
+
+
+    <div class="container" style="color: #00002E;">
+    <h1 style="color:#00002E ;">Freetown Polytechnic Library </h1>
+    <div class="book-list">
+    <table style="background-color: #C0C0C0">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th> 
+            <th>ISBN</th>
+            <th>Action</th>
+        </tr>
+    </thead> 
+    <tbody id="book-list">
+  <!--Book data will be dynamically-->
+    </tbody>
+    </table>
+    </div>
+   <div class="add-book">
+    <h2 style="color: #00002E; font-family: Georgia, 'Times New Roman', Times, serif;">Add  a  New  Book</h2>
+    <form id="add-book-form">
+        <input type="text" placeholder="Title" required>
+        <input type="text" placeholder="Author" required>
+        <input type="text" placeholder="ISBN" required>
+        <button type="submit">Add Book</button>    
+    </form>
+   </div>
+</div>
+
+<footer>
+  <p style="color:#87CEEB80;">&copy; 2023 @Marksal. All rights reserved.</p>
+</footer>
+
+
+
+<script src="Script.js"></script>
+</body> 
+</html>
